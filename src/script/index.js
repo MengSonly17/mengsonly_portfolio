@@ -34,11 +34,22 @@ document.querySelectorAll('.filter-btn').forEach(btn => {
 // Modal data
 const data = [
     {
-        title: 'dsfksj', type: 'React · Full-Stack', year: '2025', status: 'live', bg: 'bg-react', icon: '⚡',
-        desc: 'A real-time analytics platform built for enterprise teams. Features custom charting built on D3, WebSocket live data streaming, role-based permissions, and a comprehensive audit log. Reduced time-to-insight by 40% for pilot customers.',
-        tags: ['React', 'TypeScript', 'Node.js', 'PostgreSQL', 'WebSockets', 'D3.js', 'Vercel'],
-        features: ['Real-time data streaming via WebSockets', 'Custom D3-based chart builder (12 chart types)', 'Role-based access control with team workspaces', 'CSV/PDF export and scheduled email reports', 'Dark/light mode with persistent user preferences'],
-        demo: '#', github: '#'
+        title: 'Popcorn', type: 'Movie · Static Website', year: '2025', status: 'live', bg: 'bg-react', icon: '⚡',
+        desc: 'Discover your next favorite movie at Popcorn! Explore popular films, TV series, and new releases from around the world, all in one easy-to-use website. With clear categories and stunning movie images, finding great entertainment has never been easier. Whether you love action, comedy, drama, or animation, Popcorn helps you enjoy movies with just a few clicks.',
+        tags: ['HTML', 'CSS', 'JavaScript', 'Git', 'Github', 'Vercel'],
+        features: [
+            "Browse movies and TV series by category",
+            "Popular movies section on the homepage",
+            "Movies from different regions (Cambodia, USA, China, Korea)",
+            "Easy navigation with menu links",
+            "Search and discover new films quickly",
+            "Contact and About Us pages",
+            "Notification alerts for new movies",
+            "Enjoy our movies with large devices like Ipad Tablet Laptop and more",
+            "High-quality movie images and banners"
+        ],
+        demo: 'https://popcorn-lime.vercel.app',
+        github: 'https://github.com/MengSonly17/popcorn.git'
     },
     {
         title: 'Terra Shop', type: 'E-Commerce · Next.js', year: '2025', status: 'live', bg: 'bg-ecommerce', icon: '🛒',
@@ -90,29 +101,29 @@ const data = [
         demo: '#', github: '#'
     },
     {
-        title: 'Arthaus Market', 
-        type: 'E-Commerce · Marketplace', 
-        year: '2025', status: 'wip', 
-        bg: 'bg-ecommerce', 
+        title: 'Arthaus Market',
+        type: 'E-Commerce · Marketplace',
+        year: '2025', status: 'wip',
+        bg: 'bg-ecommerce',
         icon: '🎨',
         desc: 'A marketplace for independent digital artists to sell prints, assets, and optionally mint as NFTs on Solana. Handles creator payouts via Stripe Connect. Advanced search with style, medium, and color filters.',
         tags: ['Next.js', 'Solana Web3.js', 'IPFS', 'Stripe Connect', 'Prisma', 'Algolia'],
         features: ['Creator storefront with payout dashboard', 'Optional Solana NFT minting via IPFS', 'Stripe Connect split payment handling', 'Algolia-powered visual search with filters', 'Print-on-demand via Printful integration'],
-        demo: '#', 
+        demo: '#',
         github: '#'
     },
 ];
 
-function renderProject(){
+function renderProject() {
     let td = '';
 
-    data.forEach( (item,index) =>{
+    data.forEach((item, index) => {
         td += `
             <div class="card" data-cat="ecommerce react" data-id="${index}">
                 <div class="card-banner">
                     <div class="card-banner-bg bg-ecommerce"></div>
                     <div class="card-banner-pattern"></div>
-                    <div class="card-banner-num">0${index+1}</div>
+                    <div class="card-banner-num">0${index + 1}</div>
                     <div class="card-banner-icon">${item.icon}</div>
                     <div class="card-status status-live">● ${item.status}</div>
                 </div>
@@ -128,15 +139,15 @@ function renderProject(){
                     </div>
                     <div class="card-foot">
                         <div class="card-links">
-                            <a href="#" class="card-link">↗ Demo</a>
-                            <a href="#" class="card-link">⌥GitHub</a>
+                            <a href="${item.demo}" target="_blank" class="card-link">↗ Demo</a>
+                            <a  href="${item.github}" target="_blank" class="card-link">⌥GitHub</a>
                         </div>
                         <button class="card-arrow" data-open="${index}">→</button>
                     </div>
                 </div>
             </div>
         `;
-    } );
+    });
 
     document.getElementById('grid').innerHTML = td;
 }
@@ -161,8 +172,8 @@ function openModal(id) {
     document.body.style.overflow = 'hidden';
 }
 
-function closeModal() { 
-    document.getElementById('modal').classList.remove('open'); document.body.style.overflow = ''; 
+function closeModal() {
+    document.getElementById('modal').classList.remove('open'); document.body.style.overflow = '';
 }
 
 document.getElementById('modal').addEventListener('click', e => { if (e.target === document.getElementById('modal')) closeModal(); });

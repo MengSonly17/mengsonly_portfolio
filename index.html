@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- google font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;1,9..144,300;1,9..144,400&family=DM+Mono:wght@300;400&display=swap"
+        rel="stylesheet">
+
+    <!-- style.css -->
+    <link rel="stylesheet" href="./src/style/style.css">
+</head>
+
+<body>
+
+    <div class="cur" id="curDot">
+        <div class="cur-dot"></div>
+    </div>
+    <div class="cur" id="curRing">
+        <div class="cur-ring"></div>
+    </div>
+
+    <!-- progress bar -->
+    <div class="progress" id="progress"></div>
+    <!-- end of progress bar -->
+
+    <nav id="nav">
+        <a href="./index.html" class="logo">MENG<span>.</span>SONLY</a>
+        <div class="nav-r">
+            <ul class="nav-links">
+                <li><a href="./index.html" class="active">Home</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-menu-links">
+            <li><a href="./index.html" class="active" onclick="closeMobileMenu()">Home</a></li>
+            <li><a href="#projects" onclick="closeMobileMenu()">Projects</a></li>
+            <li><a href="#about" onclick="closeMobileMenu()">About</a></li>
+        </ul>
+    </div>
+
+    <div class="hero">
+        <div class="hero-grid"></div>
+        <div class="hero-glow"></div>
+        <div class="hero-inner">
+            <div class="hero-label">Web Development Portfolio</div>
+            <!-- <h1>Things I've<br><em>built</em> &amp; <span>shipped</span></h1> -->
+            <h1>Welcome to<br><em>Portfolio</em> &amp; <span>Projects</span></h1>
+            <p class="hero-sub">This is a collection of my web projects, where I turn ideas into real solutions with
+                clean code and user-friendly design.</p>
+            <!-- <div class="stats">
+                <div class="stat">
+                    <div class="stat-n">9<span>+</span></div>
+                    <div class="stat-l">Projects</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-n">7</div>
+                    <div class="stat-l">Live Apps</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-n">5</div>
+                    <div class="stat-l">Stacks</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-n">3<span>k+</span></div>
+                    <div class="stat-l">Users</div>
+                </div>
+            </div> -->
+            
+            <div class="stats">
+                <div class="stat">
+                    <div class="stat-n">5<span>+</span></div>
+                    <div class="stat-l">Completed Projects</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-n">3+</div>
+                    <div class="stat-l">Deployed App</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-n">6<span>+</span></div>
+                    <div class="stat-l">Tech Skills</div>
+                </div>
+                <div class="stat">
+                    <div class="stat-n">3+</div>
+                    <div class="stat-l">Learning Journey</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="filter-wrap" id="projects">
+        <div class="filter-bar">
+            <span class="filter-label">Filter:</span>
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="react">React</button>
+            <button class="filter-btn" data-filter="fullstack">Full-Stack</button>
+            <button class="filter-btn" data-filter="mobile">Mobile</button>
+            <button class="filter-btn" data-filter="api">API / Backend</button>
+            <button class="filter-btn" data-filter="ecommerce">E-Commerce</button>
+            <div class="filter-count">Showing <span id="visibleCount">9</span> projects</div>
+        </div>
+    </div>
+
+    <div class="projects-wrap">
+        <div class="projects-grid" id="grid">
+            <!--
+            <div class="card" data-cat="react fullstack" data-id="0">
+                <div class="card-banner">
+                    <div class="card-banner-bg bg-react"></div>
+                    <div class="card-banner-pattern"></div>
+                    <div class="card-banner-num">01</div>
+                    <div class="card-banner-icon">⚡</div>
+                    <div class="card-status status-live">● Live</div>
+                </div>
+                <div class="card-body">
+                    <div class="card-top"><span class="card-type">React · Full-Stack</span><span
+                            class="card-year">2025</span>
+                    </div>
+                    <div class="card-title">Nexus Dashboard</div>
+                    <div class="card-desc">Real-time analytics platform with custom charting, team permissions, and
+                        WebSocket data
+                        streaming.</div>
+                    <div class="card-tags"><span class="tag accent">React</span><span class="tag">TypeScript</span><span
+                            class="tag">Node.js</span><span class="tag">PostgreSQL</span><span
+                            class="tag">WebSockets</span></div>
+                    <div class="card-foot">
+                        <div class="card-links"><a href="#" class="card-link">↗ Demo</a><a href="#" class="card-link">⌥
+                                GitHub</a>
+                        </div><button class="card-arrow" data-open="0">→</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card" data-cat="ecommerce react" data-id="1">
+                <div class="card-banner">
+                    <div class="card-banner-bg bg-ecommerce"></div>
+                    <div class="card-banner-pattern"></div>
+                    <div class="card-banner-num">02</div>
+                    <div class="card-banner-icon">🛒</div>
+                    <div class="card-status status-live">● Live</div>
+                </div>
+                <div class="card-body">
+                    <div class="card-top"><span class="card-type">E-Commerce · Next.js</span><span
+                            class="card-year">2025</span>
+                    </div>
+                    <div class="card-title">Terra Shop</div>
+                    <div class="card-desc">Plant care e-commerce with Stripe checkout, inventory management, and
+                        automated order
+                        emails.</div>
+                    <div class="card-tags"><span class="tag accent">Next.js</span><span class="tag">Stripe</span><span
+                            class="tag">Prisma</span><span class="tag">Tailwind</span></div>
+                    <div class="card-foot">
+                        <div class="card-links"><a href="#" class="card-link">↗ Demo</a><a href="#" class="card-link">⌥
+                                GitHub</a>
+                        </div><button class="card-arrow" data-open="1">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-cat="mobile" data-id="2">
+                <div class="card-banner">
+                    <div class="card-banner-bg bg-mobile"></div>
+                    <div class="card-banner-pattern"></div>
+                    <div class="card-banner-num">03</div>
+                    <div class="card-banner-icon">💸</div>
+                    <div class="card-status status-live">● Live</div>
+                </div>
+                <div class="card-body">
+                    <div class="card-top"><span class="card-type">Mobile · React Native</span><span
+                            class="card-year">2024</span>
+                    </div>
+                    <div class="card-title">Flux Finance</div>
+                    <div class="card-desc">Personal finance app with AI spending insights, budget goals, and bank
+                        account sync via
+                        Plaid.</div>
+                    <div class="card-tags"><span class="tag accent">React Native</span><span
+                            class="tag">Expo</span><span class="tag">Python</span><span class="tag">Plaid API</span>
+                    </div>
+                    <div class="card-foot">
+                        <div class="card-links"><a href="#" class="card-link">↗ App Store</a><a href="#"
+                                class="card-link">⌥
+                                GitHub</a></div><button class="card-arrow" data-open="2">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-cat="api fullstack" data-id="3">
+                <div class="card-banner">
+                    <div class="card-banner-bg bg-api"></div>
+                    <div class="card-banner-pattern"></div>
+                    <div class="card-banner-num">04</div>
+                    <div class="card-banner-icon">🔌</div>
+                    <div class="card-status status-live">● Live</div>
+                </div>
+                <div class="card-body">
+                    <div class="card-top"><span class="card-type">API · Developer Tool</span><span
+                            class="card-year">2024</span>
+                    </div>
+                    <div class="card-title">QuickAPI</div>
+                    <div class="card-desc">Spin up mock REST APIs with custom schemas, auth, and rate limiting in under
+                        30
+                        seconds.</div>
+                    <div class="card-tags"><span class="tag accent">Node.js</span><span class="tag">Express</span><span
+                            class="tag">Redis</span><span class="tag">Docker</span></div>
+                    <div class="card-foot">
+                        <div class="card-links"><a href="#" class="card-link">↗ Docs</a><a href="#" class="card-link">⌥
+                                GitHub</a>
+                        </div><button class="card-arrow" data-open="3">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-cat="react" data-id="4">
+                <div class="card-banner">
+                    <div class="card-banner-bg bg-react"></div>
+                    <div class="card-banner-pattern"></div>
+                    <div class="card-banner-num">05</div>
+                    <div class="card-banner-icon">📋</div>
+                    <div class="card-status status-live">● Live</div>
+                </div>
+                <div class="card-body">
+                    <div class="card-top"><span class="card-type">React · SaaS</span><span class="card-year">2024</span>
+                    </div>
+                    <div class="card-title">TaskFlow</div>
+                    <div class="card-desc">Kanban project management with drag-and-drop, real-time collaboration, and
+                        GitHub PR
+                        sync.</div>
+                    <div class="card-tags"><span class="tag accent">React</span><span class="tag">DnD Kit</span><span
+                            class="tag">Socket.io</span><span class="tag">MongoDB</span></div>
+                    <div class="card-foot">
+                        <div class="card-links"><a href="#" class="card-link">↗ Demo</a><a href="#" class="card-link">⌥
+                                GitHub</a>
+                        </div><button class="card-arrow" data-open="4">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-cat="fullstack" data-id="5">
+                <div class="card-banner">
+                    <div class="card-banner-bg bg-fullstack"></div>
+                    <div class="card-banner-pattern"></div>
+                    <div class="card-banner-num">06</div>
+                    <div class="card-banner-icon">📰</div>
+                    <div class="card-status status-wip">◐ In Progress</div>
+                </div>
+                <div class="card-body">
+                    <div class="card-top"><span class="card-type">Full-Stack · CMS</span><span
+                            class="card-year">2025</span></div>
+                    <div class="card-title">Scribe CMS</div>
+                    <div class="card-desc">Headless CMS with rich-text editor, media library, multi-language support,
+                        and REST +
+                        GraphQL API.</div>
+                    <div class="card-tags"><span class="tag accent">Vue 3</span><span class="tag">GraphQL</span><span
+                            class="tag">Supabase</span><span class="tag">S3</span></div>
+                    <div class="card-foot">
+                        <div class="card-links"><a href="#" class="card-link">↗ Preview</a><a href="#"
+                                class="card-link">⌥
+                                GitHub</a></div><button class="card-arrow" data-open="5">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-cat="mobile api" data-id="6">
+                <div class="card-banner">
+                    <div class="card-banner-bg bg-mobile"></div>
+                    <div class="card-banner-pattern"></div>
+                    <div class="card-banner-num">07</div>
+                    <div class="card-banner-icon">🏃</div>
+                    <div class="card-status status-live">● Live</div>
+                </div>
+                <div class="card-body">
+                    <div class="card-top"><span class="card-type">Mobile · Fitness</span><span
+                            class="card-year">2023</span></div>
+                    <div class="card-title">PaceTrack</div>
+                    <div class="card-desc">GPS running tracker with route mapping, performance analytics, and social
+                        challenges.
+                    </div>
+                    <div class="card-tags"><span class="tag accent">Flutter</span><span class="tag">Dart</span><span
+                            class="tag">FastAPI</span><span class="tag">MapBox</span></div>
+                    <div class="card-foot">
+                        <div class="card-links"><a href="#" class="card-link">↗ App Store</a><a href="#"
+                                class="card-link">⌥
+                                GitHub</a></div><button class="card-arrow" data-open="6">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-cat="api fullstack" data-id="7">
+                <div class="card-banner">
+                    <div class="card-banner-bg bg-node"></div>
+                    <div class="card-banner-pattern"></div>
+                    <div class="card-banner-num">08</div>
+                    <div class="card-banner-icon">🤖</div>
+                    <div class="card-status status-live">● Live</div>
+                </div>
+                <div class="card-body">
+                    <div class="card-top"><span class="card-type">AI · Full-Stack</span><span
+                            class="card-year">2025</span></div>
+                    <div class="card-title">DocuMind</div>
+                    <div class="card-desc">Upload PDFs and chat with your documents via vector embeddings and
+                        retrieval-augmented
+                        generation.</div>
+                    <div class="card-tags"><span class="tag accent">Python</span><span class="tag">LangChain</span><span
+                            class="tag">Pinecone</span><span class="tag">Next.js</span></div>
+                    <div class="card-foot">
+                        <div class="card-links"><a href="#" class="card-link">↗ Demo</a><a href="#" class="card-link">⌥
+                                GitHub</a>
+                        </div><button class="card-arrow" data-open="7">→</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card" data-cat="ecommerce fullstack" data-id="8">
+                <div class="card-banner">
+                    <div class="card-banner-bg bg-ecommerce"></div>
+                    <div class="card-banner-pattern"></div>
+                    <div class="card-banner-num">09</div>
+                    <div class="card-banner-icon">🎨</div>
+                    <div class="card-status status-wip">◐ In Progress</div>
+                </div>
+                <div class="card-body">
+                    <div class="card-top"><span class="card-type">E-Commerce · Marketplace</span><span
+                            class="card-year">2025</span></div>
+                    <div class="card-title">Arthaus Market</div>
+                    <div class="card-desc">Digital art marketplace with creator payouts, optional NFT minting, and
+                        advanced visual
+                        search.</div>
+                    <div class="card-tags"><span class="tag accent">Next.js</span><span class="tag">Solana</span><span
+                            class="tag">IPFS</span><span class="tag">Stripe</span></div>
+                    <div class="card-foot">
+                        <div class="card-links"><a href="#" class="card-link">↗ Preview</a><a href="#"
+                                class="card-link">⌥
+                                GitHub</a></div><button class="card-arrow" data-open="8">→</button>
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="no-results" id="noResults"><big>◎</big>No projects match this filter.</div>
+        </div>
+    </div>
+
+    <!-- MODAL -->
+    <div class="modal-backdrop" id="modal">
+        <div class="modal" id="modalBox">
+            <div class="modal-banner" id="modalBanner">
+                <div class="modal-banner-icon" id="modalIcon"></div>
+                <button class="modal-close" id="modalClose">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-meta" id="modalMeta"></div>
+                <div class="modal-title" id="modalTitle"></div>
+                <div class="modal-desc" id="modalDesc"></div>
+                <div class="modal-section-title">Stack</div>
+                <div class="modal-tags" id="modalTags"></div>
+                <div class="modal-section-title">Key Features</div>
+                <div class="modal-features" id="modalFeatures"></div>
+                <div class="modal-links" id="modalLinks"></div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ABOUT -->
+    <section class="about-section" id="about">
+        <div class="about-inner">
+
+            <!-- about me sction -->
+            <div class="about-left">
+                <div class="about-tag">About Me</div>
+                <h2 class="about-heading">Building things<br>that <em>matter</em></h2>
+                <p class="about-bio">I am Meng Sonly — a fourth-year student studying Management Information Systems at
+                    SETEC Institute. I am interested in full-stack development and enjoy building websites.</p>
+                <p class="about-bio">I have skills in HTML, CSS, JavaScript, and I have used frameworks like Vue.js and
+                    React. I have created some projects such as an e-commerce website and a movie website, where I
+                    focused on making simple and user-friendly designs.</p>
+                <p class="about-bio">I also have basic knowledge of backend development and databases. I am eager to
+                    learn more and start working as a full-stack Developer Intern to gain real experience and improve my
+                    skills.</p>
+
+                <div class="social-section">
+                    <p class="about-bio">
+                        Facebook : <a class="about-btn-primary" target="_blank"
+                            href="https://www.facebook.com/lee.hee.min369/">Meng Sonly</a>
+                    </p>
+                    <p class="about-bio">
+                        Telegram : <a class="about-btn-primary" href="tell:010947790">+855 10 94 77 90</a>
+                    </p>
+                </div>
+
+                <div class="about-actions">
+                    <a href="./src/assets/cv.pdf" download class="about-btn about-btn-primary">↗ Download CV</a>
+                    <a href="mailto:mengsonly5555@gmail.com" class="about-btn about-btn-ghost">✉ Get in Touch</a>
+                </div>
+            </div>
+            <!-- end of about me sction -->
+
+            <div class="about-right">
+
+                <!-- profile picture -->
+                <div class="about-avatar-wrap">
+                    <div class="about-avatar">
+                        <div class="about-avatar-inner">
+                            <img src="./src/assets/img/mengsonly.jpg" alt="MengSonly Picture">
+                        </div>
+                        <div class="about-avatar-corner">● Open to work</div>
+                    </div>
+                </div>
+                <!-- end of profile picture -->
+
+                <!-- skills -->
+                <div class="about-skills-grid">
+                    <div class="about-skill" data-pct="0.85">
+                        <div class="about-skill-name">HTML / CSS</div>
+                        <div class="about-skill-bar">
+                            <div class="about-skill-fill"></div>
+                        </div>
+                        <div class="about-skill-pct">85%</div>
+                    </div>
+
+                    <div class="about-skill" data-pct="0.70">
+                        <div class="about-skill-name">JavaScript</div>
+                        <div class="about-skill-bar">
+                            <div class="about-skill-fill"></div>
+                        </div>
+                        <div class="about-skill-pct">70%</div>
+                    </div>
+
+                    <div class="about-skill" data-pct="0.85">
+                        <div class="about-skill-name">Bootstrap / TailwindCss</div>
+                        <div class="about-skill-bar">
+                            <div class="about-skill-fill"></div>
+                        </div>
+                        <div class="about-skill-pct">85%</div>
+                    </div>
+
+                    <div class="about-skill" data-pct="0.5">
+                        <div class="about-skill-name">Reactjs / Vue.js</div>
+                        <div class="about-skill-bar">
+                            <div class="about-skill-fill"></div>
+                        </div>
+                        <div class="about-skill-pct">56%</div>
+                    </div>
+
+                    <div class="about-skill" data-pct="0.63">
+                        <div class="about-skill-name">Python</div>
+                        <div class="about-skill-bar">
+                            <div class="about-skill-fill"></div>
+                        </div>
+                        <div class="about-skill-pct">63%</div>
+                    </div>
+
+                    <div class="about-skill" data-pct="0.71">
+                        <div class="about-skill-name">C / C++ </div>
+                        <div class="about-skill-bar">
+                            <div class="about-skill-fill"></div>
+                        </div>
+                        <div class="about-skill-pct">71%</div>
+                    </div>
+
+                    <div class="about-skill" data-pct="0.76">
+                        <div class="about-skill-name">Django / Flask </div>
+                        <div class="about-skill-bar">
+                            <div class="about-skill-fill"></div>
+                        </div>
+                        <div class="about-skill-pct">76%</div>
+                    </div>
+
+                    <div class="about-skill" data-pct="0.60">
+                        <div class="about-skill-name">Java </div>
+                        <div class="about-skill-bar">
+                            <div class="about-skill-fill"></div>
+                        </div>
+                        <div class="about-skill-pct">60%</div>
+                    </div>
+
+                    <div class="about-skill" data-pct="0.66">
+                        <div class="about-skill-name">MySQL / SQL </div>
+                        <div class="about-skill-bar">
+                            <div class="about-skill-fill"></div>
+                        </div>
+                        <div class="about-skill-pct">66%</div>
+                    </div>
+
+                    <div class="about-skill" data-pct="0.45">
+                        <div class="about-skill-name">Spring Boot </div>
+                        <div class="about-skill-bar">
+                            <div class="about-skill-fill"></div>
+                        </div>
+                        <div class="about-skill-pct">45%</div>
+                    </div>
+
+                    <div class="about-skill" data-pct="0.45">
+                        <div class="about-skill-name">Express.js </div>
+                        <div class="about-skill-bar">
+                            <div class="about-skill-fill"></div>
+                        </div>
+                        <div class="about-skill-pct">45%</div>
+                    </div>
+
+                    <div class="about-skill" data-pct="0.35">
+                        <div class="about-skill-name">MongoDB </div>
+                        <div class="about-skill-bar">
+                            <div class="about-skill-fill"></div>
+                        </div>
+                        <div class="about-skill-pct">35%</div>
+                    </div>
+                </div>
+                <!-- end of skills -->
+
+                <div class="about-extras">
+                    <div class="about-extra">
+                        <div class="about-extra-num">1<span>+</span></div>
+                        <div class="about-extra-label">Years Exp.</div>
+                    </div>
+                    <div class="about-extra">
+                        <div class="about-extra-num">18</div>
+                        <div class="about-extra-label">Projects</div>
+                    </div>
+                    <div class="about-extra">
+                        <div class="about-extra-num">23</div>
+                        <div class="about-extra-label">Happy Clients</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <span>© 2026 Meng Sonly</span>
+        <span>Built with care · <a href="mailto:mengsonly5555@gmail.com">Get in touch</a></span>
+    </footer>
+
+    <script src="./src/script/index.js"></script>
+</body>
+
+</html>

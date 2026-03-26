@@ -51,67 +51,67 @@ const data = [
         demo: 'https://popcorn-lime.vercel.app',
         github: 'https://github.com/MengSonly17/popcorn.git'
     },
-    {
-        title: 'Terra Shop', type: 'E-Commerce · Next.js', year: '2025', status: 'live', bg: 'bg-ecommerce', icon: '🛒',
-        desc: 'Full-featured plant care e-commerce store handling the complete purchase flow from browsing to delivery tracking. Stripe integration for payments, automated email receipts, and a Shopify-like admin panel for inventory.',
-        tags: ['Next.js 14', 'Stripe', 'Prisma', 'PostgreSQL', 'Tailwind', 'Resend'],
-        features: ['Full Stripe checkout with webhook handling', 'Admin panel for inventory and order management', 'Automated email notifications via Resend', 'Customer account portal with order history', 'Product reviews and ratings system'],
-        demo: '#', github: '#'
-    },
-    {
-        title: 'Flux Finance', type: 'Mobile · React Native', year: '2024', status: 'live', bg: 'bg-mobile', icon: '💸',
-        desc: 'Personal finance app that connects to bank accounts via the Plaid API. Uses ML to categorize transactions, identify spending patterns, and surface actionable insights. 2.1k downloads on App Store.',
-        tags: ['React Native', 'Expo', 'Python', 'FastAPI', 'Plaid API', 'TensorFlow Lite'],
-        features: ['Bank connection via Plaid API', 'AI-powered spending categorization', 'Budget goal tracking with push alerts', 'Animated charts and trend visualizations', 'Biometric authentication (FaceID/TouchID)'],
-        demo: '#', github: '#'
-    },
-    {
-        title: 'QuickAPI', type: 'API · Developer Tool', year: '2024', status: 'live', bg: 'bg-api', icon: '🔌',
-        desc: 'Developer productivity tool for spinning up fully-featured mock REST APIs without writing server code. Define your schema in JSON, get a working API with auth, rate limiting, and CORS in under 30 seconds. Used by 800+ devs.',
-        tags: ['Node.js', 'Express', 'Redis', 'Docker', 'JSON Schema', 'JWT', 'Railway'],
-        features: ['Schema-driven API generation from JSON config', 'JWT and API key authentication options', 'Built-in rate limiting and request logging', 'Auto-generated OpenAPI/Swagger documentation', 'One-click Docker container deployment'],
-        demo: '#', github: '#'
-    },
-    {
-        title: 'TaskFlow', type: 'React · SaaS', year: '2024', status: 'live', bg: 'bg-react', icon: '📋',
-        desc: 'Collaborative project management app with a Kanban interface. Teams can create boards, assign tasks, set deadlines, and track progress. GitHub integration syncs PRs and commits to relevant tasks automatically.',
-        tags: ['React', 'DnD Kit', 'Socket.io', 'Node.js', 'MongoDB', 'GitHub OAuth'],
-        features: ['Drag-and-drop Kanban with custom columns', 'Real-time collaboration via Socket.io', 'GitHub PR and commit sync integration', 'Time tracking and burndown charts', 'Slack notification webhooks'],
-        demo: '#', github: '#'
-    },
-    {
-        title: 'Scribe CMS', type: 'Full-Stack · Headless CMS', year: '2025', status: 'wip', bg: 'bg-fullstack', icon: '📰',
-        desc: 'A flexible headless CMS aimed at developers and content teams. Ships both REST and GraphQL APIs. The editor is built on TipTap with custom blocks, and media is stored on S3 with automatic WebP conversion.',
-        tags: ['Vue 3', 'Pinia', 'GraphQL', 'Supabase', 'AWS S3', 'TipTap', 'Docker'],
-        features: ['Rich-text editor with custom block types', 'REST + GraphQL dual API output', 'Multi-language and i18n content fields', 'Role-based editorial workflow and approval', 'S3 media library with auto-optimization'],
-        demo: '#', github: '#'
-    },
-    {
-        title: 'PaceTrack', type: 'Mobile · Fitness', year: '2023', status: 'live', bg: 'bg-mobile', icon: '🏃',
-        desc: 'GPS running tracker for serious athletes. Records routes, elevation, pace, and heart rate. Social features let friends challenge each other to weekly distance goals. 1.4k installs on Google Play.',
-        tags: ['Flutter', 'Dart', 'FastAPI', 'PostgreSQL', 'MapBox', 'HealthKit', 'Firebase'],
-        features: ['GPS route recording with elevation profiling', 'HealthKit and Google Fit integration', 'Friends and weekly challenge system', 'Leaderboards with personal records', 'Offline recording with background sync'],
-        demo: '#', github: '#'
-    },
-    {
-        title: 'DocuMind', type: 'AI · Full-Stack', year: '2025', status: 'live', bg: 'bg-node', icon: '🤖',
-        desc: 'Upload any PDF and ask it questions in plain English. Uses OpenAI embeddings chunked into Pinecone, with a LangChain RAG pipeline to retrieve the most relevant sections and generate grounded, cited answers.',
-        tags: ['Python', 'LangChain', 'Pinecone', 'OpenAI', 'Next.js', 'FastAPI', 'Vercel'],
-        features: ['PDF upload with automatic chunking and indexing', 'Vector similarity search via Pinecone', 'Source citation included in every answer', 'Conversation history per uploaded document', 'Multi-document cross-reference mode'],
-        demo: '#', github: '#'
-    },
-    {
-        title: 'Arthaus Market',
-        type: 'E-Commerce · Marketplace',
-        year: '2025', status: 'wip',
-        bg: 'bg-ecommerce',
-        icon: '🎨',
-        desc: 'A marketplace for independent digital artists to sell prints, assets, and optionally mint as NFTs on Solana. Handles creator payouts via Stripe Connect. Advanced search with style, medium, and color filters.',
-        tags: ['Next.js', 'Solana Web3.js', 'IPFS', 'Stripe Connect', 'Prisma', 'Algolia'],
-        features: ['Creator storefront with payout dashboard', 'Optional Solana NFT minting via IPFS', 'Stripe Connect split payment handling', 'Algolia-powered visual search with filters', 'Print-on-demand via Printful integration'],
-        demo: '#',
-        github: '#'
-    },
+    // {
+    //     title: 'Terra Shop', type: 'E-Commerce · Next.js', year: '2025', status: 'live', bg: 'bg-ecommerce', icon: '🛒',
+    //     desc: 'Full-featured plant care e-commerce store handling the complete purchase flow from browsing to delivery tracking. Stripe integration for payments, automated email receipts, and a Shopify-like admin panel for inventory.',
+    //     tags: ['Next.js 14', 'Stripe', 'Prisma', 'PostgreSQL', 'Tailwind', 'Resend'],
+    //     features: ['Full Stripe checkout with webhook handling', 'Admin panel for inventory and order management', 'Automated email notifications via Resend', 'Customer account portal with order history', 'Product reviews and ratings system'],
+    //     demo: '#', github: '#'
+    // },
+    // {
+    //     title: 'Flux Finance', type: 'Mobile · React Native', year: '2024', status: 'live', bg: 'bg-mobile', icon: '💸',
+    //     desc: 'Personal finance app that connects to bank accounts via the Plaid API. Uses ML to categorize transactions, identify spending patterns, and surface actionable insights. 2.1k downloads on App Store.',
+    //     tags: ['React Native', 'Expo', 'Python', 'FastAPI', 'Plaid API', 'TensorFlow Lite'],
+    //     features: ['Bank connection via Plaid API', 'AI-powered spending categorization', 'Budget goal tracking with push alerts', 'Animated charts and trend visualizations', 'Biometric authentication (FaceID/TouchID)'],
+    //     demo: '#', github: '#'
+    // },
+    // {
+    //     title: 'QuickAPI', type: 'API · Developer Tool', year: '2024', status: 'live', bg: 'bg-api', icon: '🔌',
+    //     desc: 'Developer productivity tool for spinning up fully-featured mock REST APIs without writing server code. Define your schema in JSON, get a working API with auth, rate limiting, and CORS in under 30 seconds. Used by 800+ devs.',
+    //     tags: ['Node.js', 'Express', 'Redis', 'Docker', 'JSON Schema', 'JWT', 'Railway'],
+    //     features: ['Schema-driven API generation from JSON config', 'JWT and API key authentication options', 'Built-in rate limiting and request logging', 'Auto-generated OpenAPI/Swagger documentation', 'One-click Docker container deployment'],
+    //     demo: '#', github: '#'
+    // },
+    // {
+    //     title: 'TaskFlow', type: 'React · SaaS', year: '2024', status: 'live', bg: 'bg-react', icon: '📋',
+    //     desc: 'Collaborative project management app with a Kanban interface. Teams can create boards, assign tasks, set deadlines, and track progress. GitHub integration syncs PRs and commits to relevant tasks automatically.',
+    //     tags: ['React', 'DnD Kit', 'Socket.io', 'Node.js', 'MongoDB', 'GitHub OAuth'],
+    //     features: ['Drag-and-drop Kanban with custom columns', 'Real-time collaboration via Socket.io', 'GitHub PR and commit sync integration', 'Time tracking and burndown charts', 'Slack notification webhooks'],
+    //     demo: '#', github: '#'
+    // },
+    // {
+    //     title: 'Scribe CMS', type: 'Full-Stack · Headless CMS', year: '2025', status: 'wip', bg: 'bg-fullstack', icon: '📰',
+    //     desc: 'A flexible headless CMS aimed at developers and content teams. Ships both REST and GraphQL APIs. The editor is built on TipTap with custom blocks, and media is stored on S3 with automatic WebP conversion.',
+    //     tags: ['Vue 3', 'Pinia', 'GraphQL', 'Supabase', 'AWS S3', 'TipTap', 'Docker'],
+    //     features: ['Rich-text editor with custom block types', 'REST + GraphQL dual API output', 'Multi-language and i18n content fields', 'Role-based editorial workflow and approval', 'S3 media library with auto-optimization'],
+    //     demo: '#', github: '#'
+    // },
+    // {
+    //     title: 'PaceTrack', type: 'Mobile · Fitness', year: '2023', status: 'live', bg: 'bg-mobile', icon: '🏃',
+    //     desc: 'GPS running tracker for serious athletes. Records routes, elevation, pace, and heart rate. Social features let friends challenge each other to weekly distance goals. 1.4k installs on Google Play.',
+    //     tags: ['Flutter', 'Dart', 'FastAPI', 'PostgreSQL', 'MapBox', 'HealthKit', 'Firebase'],
+    //     features: ['GPS route recording with elevation profiling', 'HealthKit and Google Fit integration', 'Friends and weekly challenge system', 'Leaderboards with personal records', 'Offline recording with background sync'],
+    //     demo: '#', github: '#'
+    // },
+    // {
+    //     title: 'DocuMind', type: 'AI · Full-Stack', year: '2025', status: 'live', bg: 'bg-node', icon: '🤖',
+    //     desc: 'Upload any PDF and ask it questions in plain English. Uses OpenAI embeddings chunked into Pinecone, with a LangChain RAG pipeline to retrieve the most relevant sections and generate grounded, cited answers.',
+    //     tags: ['Python', 'LangChain', 'Pinecone', 'OpenAI', 'Next.js', 'FastAPI', 'Vercel'],
+    //     features: ['PDF upload with automatic chunking and indexing', 'Vector similarity search via Pinecone', 'Source citation included in every answer', 'Conversation history per uploaded document', 'Multi-document cross-reference mode'],
+    //     demo: '#', github: '#'
+    // },
+    // {
+    //     title: 'Arthaus Market',
+    //     type: 'E-Commerce · Marketplace',
+    //     year: '2025', status: 'wip',
+    //     bg: 'bg-ecommerce',
+    //     icon: '🎨',
+    //     desc: 'A marketplace for independent digital artists to sell prints, assets, and optionally mint as NFTs on Solana. Handles creator payouts via Stripe Connect. Advanced search with style, medium, and color filters.',
+    //     tags: ['Next.js', 'Solana Web3.js', 'IPFS', 'Stripe Connect', 'Prisma', 'Algolia'],
+    //     features: ['Creator storefront with payout dashboard', 'Optional Solana NFT minting via IPFS', 'Stripe Connect split payment handling', 'Algolia-powered visual search with filters', 'Print-on-demand via Printful integration'],
+    //     demo: '#',
+    //     github: '#'
+    // },
 ];
 
 function renderProject() {

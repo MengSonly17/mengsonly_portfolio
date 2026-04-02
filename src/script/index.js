@@ -51,67 +51,186 @@ const data = [
         demo: 'https://popcorn-lime.vercel.app',
         github: 'https://github.com/MengSonly17/popcorn.git'
     },
-    // {
-    //     title: 'Terra Shop', type: 'E-Commerce · Next.js', year: '2025', status: 'live', bg: 'bg-ecommerce', icon: '🛒',
-    //     desc: 'Full-featured plant care e-commerce store handling the complete purchase flow from browsing to delivery tracking. Stripe integration for payments, automated email receipts, and a Shopify-like admin panel for inventory.',
-    //     tags: ['Next.js 14', 'Stripe', 'Prisma', 'PostgreSQL', 'Tailwind', 'Resend'],
-    //     features: ['Full Stripe checkout with webhook handling', 'Admin panel for inventory and order management', 'Automated email notifications via Resend', 'Customer account portal with order history', 'Product reviews and ratings system'],
-    //     demo: '#', github: '#'
-    // },
-    // {
-    //     title: 'Flux Finance', type: 'Mobile · React Native', year: '2024', status: 'live', bg: 'bg-mobile', icon: '💸',
-    //     desc: 'Personal finance app that connects to bank accounts via the Plaid API. Uses ML to categorize transactions, identify spending patterns, and surface actionable insights. 2.1k downloads on App Store.',
-    //     tags: ['React Native', 'Expo', 'Python', 'FastAPI', 'Plaid API', 'TensorFlow Lite'],
-    //     features: ['Bank connection via Plaid API', 'AI-powered spending categorization', 'Budget goal tracking with push alerts', 'Animated charts and trend visualizations', 'Biometric authentication (FaceID/TouchID)'],
-    //     demo: '#', github: '#'
-    // },
-    // {
-    //     title: 'QuickAPI', type: 'API · Developer Tool', year: '2024', status: 'live', bg: 'bg-api', icon: '🔌',
-    //     desc: 'Developer productivity tool for spinning up fully-featured mock REST APIs without writing server code. Define your schema in JSON, get a working API with auth, rate limiting, and CORS in under 30 seconds. Used by 800+ devs.',
-    //     tags: ['Node.js', 'Express', 'Redis', 'Docker', 'JSON Schema', 'JWT', 'Railway'],
-    //     features: ['Schema-driven API generation from JSON config', 'JWT and API key authentication options', 'Built-in rate limiting and request logging', 'Auto-generated OpenAPI/Swagger documentation', 'One-click Docker container deployment'],
-    //     demo: '#', github: '#'
-    // },
-    // {
-    //     title: 'TaskFlow', type: 'React · SaaS', year: '2024', status: 'live', bg: 'bg-react', icon: '📋',
-    //     desc: 'Collaborative project management app with a Kanban interface. Teams can create boards, assign tasks, set deadlines, and track progress. GitHub integration syncs PRs and commits to relevant tasks automatically.',
-    //     tags: ['React', 'DnD Kit', 'Socket.io', 'Node.js', 'MongoDB', 'GitHub OAuth'],
-    //     features: ['Drag-and-drop Kanban with custom columns', 'Real-time collaboration via Socket.io', 'GitHub PR and commit sync integration', 'Time tracking and burndown charts', 'Slack notification webhooks'],
-    //     demo: '#', github: '#'
-    // },
-    // {
-    //     title: 'Scribe CMS', type: 'Full-Stack · Headless CMS', year: '2025', status: 'wip', bg: 'bg-fullstack', icon: '📰',
-    //     desc: 'A flexible headless CMS aimed at developers and content teams. Ships both REST and GraphQL APIs. The editor is built on TipTap with custom blocks, and media is stored on S3 with automatic WebP conversion.',
-    //     tags: ['Vue 3', 'Pinia', 'GraphQL', 'Supabase', 'AWS S3', 'TipTap', 'Docker'],
-    //     features: ['Rich-text editor with custom block types', 'REST + GraphQL dual API output', 'Multi-language and i18n content fields', 'Role-based editorial workflow and approval', 'S3 media library with auto-optimization'],
-    //     demo: '#', github: '#'
-    // },
-    // {
-    //     title: 'PaceTrack', type: 'Mobile · Fitness', year: '2023', status: 'live', bg: 'bg-mobile', icon: '🏃',
-    //     desc: 'GPS running tracker for serious athletes. Records routes, elevation, pace, and heart rate. Social features let friends challenge each other to weekly distance goals. 1.4k installs on Google Play.',
-    //     tags: ['Flutter', 'Dart', 'FastAPI', 'PostgreSQL', 'MapBox', 'HealthKit', 'Firebase'],
-    //     features: ['GPS route recording with elevation profiling', 'HealthKit and Google Fit integration', 'Friends and weekly challenge system', 'Leaderboards with personal records', 'Offline recording with background sync'],
-    //     demo: '#', github: '#'
-    // },
-    // {
-    //     title: 'DocuMind', type: 'AI · Full-Stack', year: '2025', status: 'live', bg: 'bg-node', icon: '🤖',
-    //     desc: 'Upload any PDF and ask it questions in plain English. Uses OpenAI embeddings chunked into Pinecone, with a LangChain RAG pipeline to retrieve the most relevant sections and generate grounded, cited answers.',
-    //     tags: ['Python', 'LangChain', 'Pinecone', 'OpenAI', 'Next.js', 'FastAPI', 'Vercel'],
-    //     features: ['PDF upload with automatic chunking and indexing', 'Vector similarity search via Pinecone', 'Source citation included in every answer', 'Conversation history per uploaded document', 'Multi-document cross-reference mode'],
-    //     demo: '#', github: '#'
-    // },
-    // {
-    //     title: 'Arthaus Market',
-    //     type: 'E-Commerce · Marketplace',
-    //     year: '2025', status: 'wip',
-    //     bg: 'bg-ecommerce',
-    //     icon: '🎨',
-    //     desc: 'A marketplace for independent digital artists to sell prints, assets, and optionally mint as NFTs on Solana. Handles creator payouts via Stripe Connect. Advanced search with style, medium, and color filters.',
-    //     tags: ['Next.js', 'Solana Web3.js', 'IPFS', 'Stripe Connect', 'Prisma', 'Algolia'],
-    //     features: ['Creator storefront with payout dashboard', 'Optional Solana NFT minting via IPFS', 'Stripe Connect split payment handling', 'Algolia-powered visual search with filters', 'Print-on-demand via Printful integration'],
-    //     demo: '#',
-    //     github: '#'
-    // },
+    {
+        title: 'Shopier',
+        type: 'E-commerce · Full Stack Website',
+        year: '2026',
+        status: 'development', // change to 'live' if deployed
+        bg: 'bg-react',
+        icon: '🛒',
+        desc: 'Shopier is a modern e-commerce web application that allows users to browse products, manage carts, and place orders بسهولة. It is designed with a clean UI and focuses on product management and smooth user experience. The system includes backend functionality for handling products, users, and orders, making it a complete solution for online shopping platforms.',
+        tags: ['Django', 'HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Git'],
+        features: [
+            "User authentication (login & register)",
+            "Browse products with categories",
+            "Add to cart and manage cart items",
+            "Order and checkout system",
+            "Admin panel for product management",
+            "Database integration with PostgreSQL",
+            "Responsive design for multiple devices",
+            "Clean and user-friendly UI",
+            "Product listing and detail pages"
+        ],
+        demo: '', // add your live URL if deployed (e.g. Vercel, VPS)
+        github: 'https://github.com/MengSonly17/shopier'
+    },
+    {
+        title: 'Spring Boot Web API',
+        type: 'Backend · REST API',
+        year: '2026',
+        status: 'development',
+        bg: 'bg-react',
+        icon: '⚙️',
+        desc: 'Spring Boot Web API is a backend application built using Java and Spring Boot framework to provide RESTful APIs for web applications. The project demonstrates how to design scalable backend services, handle HTTP requests, and manage data using structured architecture. It focuses on building clean APIs that can be integrated with frontend applications such as React or mobile apps.',
+        tags: ['Java', 'Spring Boot', 'REST API', 'JPA', 'Hibernate', 'MySQL', 'Git', 'GitHub'],
+        features: [
+            "RESTful API architecture using Spring Boot",
+            "CRUD operations (Create, Read, Update, Delete)",
+            "Layered architecture (Controller, Service, Repository)",
+            "Database integration with JPA/Hibernate",
+            "API testing using Postman",
+            "JSON-based request and response handling",
+            "Scalable backend structure for future expansion",
+            "Error handling and validation",
+            "Easy integration with frontend frameworks"
+        ],
+        demo: '',
+        github: 'https://github.com/MengSonly17/SpringbootWebAPI'
+    },
+    {
+        title: 'Ecommerce ',
+        type: 'E-commerce · Full Stack Website',
+        year: '2026',
+        status: 'development',
+        bg: 'bg-react',
+        icon: '🛍️',
+        desc: 'Ecommerce is a collaborative full-stack web application developed as a university project. The platform allows users to explore products, manage shopping carts, and simulate an online shopping experience. It demonstrates core e-commerce functionalities such as authentication, product management, and order processing, making it a practical implementation of modern web development concepts.',
+        tags: ['Django', 'HTML', 'CSS', 'JavaScript', 'PostgreSQL', 'Git', 'GitHub'],
+        features: [
+            "User registration and login system",
+            "Browse and view product details",
+            "Add to cart and manage cart items",
+            "Basic checkout functionality",
+            "Admin panel for managing products",
+            "Database integration for storing users and products",
+            "Team collaboration project structure",
+            "Responsive design for desktop and mobile",
+            "Simple and clean UI for easy navigation"
+        ],
+        demo: '',
+        github: 'https://github.com/MengSonly17/Ecommerce_midterm_group2'
+    },
+    {
+        title: 'Flask Project  ',
+        type: 'Web Application · Backend + Frontend',
+        year: '2026',
+        status: 'development',
+        bg: 'bg-react',
+        icon: '🐍',
+        desc: 'Flask Project Final is a web application built using the Flask framework, a lightweight Python web framework designed for building scalable and flexible web apps :contentReference[oaicite:0]{index=0}. The project demonstrates core web development concepts including routing, template rendering, and database integration. It provides a functional platform that handles user interaction and backend processing efficiently.',
+        tags: ['Flask', 'HTML', 'CSS', 'JavaScript', 'Bootstrap', 'SQLite/MySQL', 'Git', 'GitHub'],
+        features: [
+            "Flask-based web application structure",
+            "Routing and dynamic page rendering",
+            "User interaction with forms",
+            "CRUD operations (Create, Read, Update, Delete)",
+            "Database integration (SQLite/MySQL)",
+            "Template engine (Jinja2)",
+            "Responsive UI with Bootstrap",
+            "Clean and simple project structure",
+            "Suitable for learning full-stack Flask development"
+        ],
+        demo: '',
+        github: 'https://github.com/MengSonly17/flask_project_final'
+    },
+    {
+        title: 'Timer',
+        type: 'Utility ·  ',
+        year: '2026',
+        status: 'Live',
+        bg: 'bg-react',
+        icon: '⏱️',
+        desc: 'Timer is a simple and interactive web-based countdown and time management application. It allows users to track time efficiently for study, productivity, or daily tasks. Built with core frontend technologies, the project demonstrates how to handle time-based logic, user interaction, and dynamic updates in a clean and responsive interface.',
+        tags: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'],
+        features: [
+            "Countdown timer functionality",
+            "Real-time time updates using JavaScript",
+            "Start, pause, and reset controls",
+            "User-friendly and minimal UI design",
+            "Lightweight and fast performance",
+            "Easy to use for study or work sessions"
+        ],
+        demo: 'https://mengsonly17.github.io/timer/',
+        github: 'https://github.com/MengSonly17/timer'
+    },
+    {
+        title: 'Temperature Convertor',
+        type: 'Utility ',
+        year: '2026',
+        status: 'Live',
+        bg: 'bg-react',
+        icon: '🌡️',
+        desc: 'Temperature Convertor is a simple web-based application that allows users to convert temperature values between different units such as Celsius, Fahrenheit, and Kelvin. It is built using core frontend technologies and demonstrates real-time calculations, user input handling, and dynamic UI updates. This project is ideal for understanding basic JavaScript logic and unit conversion systems.',
+        tags: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'],
+        features: [
+            "Convert temperature between Celsius, Fahrenheit, and Kelvin",
+            "Real-time calculation and instant result display",
+            "User-friendly input interface",
+            "Dynamic updates using JavaScript",
+            "Responsive design for multiple devices",
+            "Lightweight and fast performance",
+            "Clear and simple UI design",
+            "Basic error handling for invalid input",
+        ],
+        demo: 'https://mengsonly17.github.io/temperature-convertor/',
+        github: 'https://github.com/MengSonly17/temperature-convertor'
+    },
+    {
+        title: 'Tip Calculator',
+        type: 'Utility  ',
+        year: '2026',
+        status: 'Live',
+        bg: 'bg-react',
+        icon: '💰',
+        desc: 'Tip Calculator is a simple and interactive web application that helps users calculate tips and split bills بسهولة. Users can input the total bill amount, select a tip percentage, and instantly see the tip amount and total cost per person. This project demonstrates fundamental JavaScript logic, user input handling, and real-time calculations in a clean and responsive interface.',
+        tags: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'],
+        features: [
+            "Calculate tip based on bill amount and percentage",
+            "Display total amount including tip",
+            "Split bill among multiple people",
+            "Real-time calculation updates",
+            "User-friendly input interface",
+            "Responsive design for mobile and desktop",
+            "Dynamic DOM manipulation using JavaScript",
+            "Clean and simple UI design",
+            "Lightweight and fast performance"
+        ],
+        demo: 'https://mengsonly17.github.io/tip-culculator/',
+        github: 'https://github.com/MengSonly17/tip-culculator'
+    },
+    {
+        title: 'Age Calculator',
+        type: 'Utility  ',
+        year: '2026',
+        status: 'Live',
+        bg: 'bg-react',
+        icon: '📅',
+        desc: 'Age Calculator is a simple web app that calculates a person’s age based on their date of birth. Users can enter their birthdate and instantly see their age in years, months, and days. This project highlights real-time date handling with JavaScript, user input validation, and dynamic UI updates in a friendly and responsive interface.',
+        tags: ['HTML', 'CSS', 'JavaScript', 'Git', 'GitHub'],
+        features: [
+            "Calculate age from date of birth",
+            "Displays results in years, months, and days",
+            "Real-time updates on input changes",
+            "User-friendly date input interface",
+            "Error handling for invalid or future dates",
+            "Responsive layout for multiple devices",
+            "Clean and clear UI design",
+            "Interactive JavaScript logic"
+        ],
+        demo: 'https://mengsonly17.github.io/age-calculator/',
+        github: 'https://github.com/MengSonly17/age-calculator'
+    }
+
 ];
 
 function renderProject() {
